@@ -10,15 +10,15 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.post('/submit', async (req, res) => {
-  const { name, email, number } = req.body;
+  const { name, email, number,message } = req.body;
   
   try {
-    const response = await fetch('https://script.google.com/macros/s/AKfycbykZUUfq16atX7nTrk22RvG3JfTK2PBiOiiMZkK26gztT1faKftywOOfPpKu2F__azn-A/exec', {
+    const response = await fetch('https://script.google.com/macros/s/AKfycbzQcWSbq31GxGFJLcn9IxOZr30kJuJHovN2kyNve8R_YFfM7FeMK83OcSRr3JR97eSSpg/exec', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ name, email, number }),
+      body: JSON.stringify({ name, email, number,message }),
     });
     
     const result = await response.json();
