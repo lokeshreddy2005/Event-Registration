@@ -14,7 +14,7 @@ function App() {
 
     try {
       console.log("ok");
-      const response = await axios.post('http://localhost:5000/submit', data);
+      const response = await axios.post('https://event-registration-server.onrender.com', data);
       console.log(response.data);
       if (response.data.result === 'success') {
         alert('Successfully submitted');
