@@ -18,6 +18,10 @@ function App() {
       console.log(response.data);
       if (response.data.result === 'success') {
         alert('Successfully submitted');
+        setName('');
+        setEmail('');
+        setNumber('');
+        setmessage('');
       } else {
         alert('Error - Not Submitted');
       }
@@ -28,10 +32,11 @@ function App() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-cyan-400">
-      <div className="w-full max-w-md p-8 px-10 bg-yellow-400 rounded-lg shadow-lg">
-        <h1 className="text-3xl  font-bold mb-6 text-center">Event-Registration Form</h1>
-        <p>*  Required fields</p>
+    <div className="flex items-center p-9 justify-center min-h-screen bg-cyan-400">
+      <div className="w-full max-w-3xl p-9  bg-yellow-400 rounded-lg shadow-lg">
+        <h1 className="text-3xl  font-bold mb-5 text-center">Registration Form</h1>
+        <p className='py-5 text-violet-600'><i>Register and join us for the upcoming Vinayaka Chaviti(Chaturthi) celebrations</i></p>
+        <p className='text-sm text-gray-700'>*  Required fields</p>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="name" className="block text-lg font-medium text-gray-700 mb-2">
@@ -43,7 +48,7 @@ function App() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="w-full px-4 py-2 border border-yellow-500 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border border-cyan-500 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           
@@ -57,7 +62,7 @@ function App() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border border-cyan-500 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           
@@ -71,7 +76,7 @@ function App() {
               value={number}
               onChange={(e) => setNumber(e.target.value)}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border border-cyan-500 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -84,7 +89,7 @@ function App() {
               type="text"
               value={message}
               onChange={(e) => setmessage(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border border-cyan-500 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             ></textarea>
           </div>
           
