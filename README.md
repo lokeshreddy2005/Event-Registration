@@ -31,6 +31,7 @@
 ### Technologies Used
 - Front-end : React.js, CSS , Tailwindcss
 - Back-end : Node.js, Express.js
+- Data Storage : Google Spreadsheet
 
 # Contributors
 CS23BTECH11011 - B.Lokesh Reddy
