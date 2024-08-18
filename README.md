@@ -31,3 +31,6 @@
 ### Technologies Used
 - Front-end : React.js, CSS , Tailwindcss
 - Back-end : Node.js, Express.js
+
+# Contributors
+CS23BTECH11011 - B.Lokesh Reddy
